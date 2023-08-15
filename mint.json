@@ -1,21 +1,21 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "UNA",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#9563FF",
-    "light": "#AE87FF",
-    "dark": "#0D001D",
+    "primary": "#ef4444",
+    "light": "#ef4444",
+    "dark": "#ef4444",
     "background": {
-      "dark": "#090014"
+      "dark": "#0c0a09"
     },
     "anchors": {
-      "from": "#FF7F57",
-      "to": "#9563FF"
+      "to": "#f87171",
+      "from": "#dc2626"
     }
   },
   "topbarLinks": [
@@ -28,29 +28,39 @@
     "name": "Dashboard",
     "url": "https://dashboard.mintlify.com"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
+  "topAnchor": {
+    "name": "Platform",
+    "icon": "circle-nodes"
+  },
+
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "Framework",
+      "icon": "code",
+      "url": "framework"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "API Reference",
+      "icon": "plug",
+      "url": "api-reference"
+    },
+    {
+      "name": "Starter Kits",
+      "icon": "rocket",
+      "url": "starters"
+    },
+    {
+      "name": "Discussions",
+      "icon": "messages",
+      "url": "https://una.io/discussions-home"
     },
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://una.io/posts-home"
     }
   ],
+
   "navigation": [
     {
       "group": "Get Started",
@@ -58,7 +68,13 @@
     },
     {
       "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "pages": [
+        "essentials/markdown",
+        "essentials/code",
+        "essentials/images",
+        "essentials/settings",
+        "essentials/navigation"
+      ]
     },
     {
       "group": "API Documentation",
@@ -72,8 +88,49 @@
         "api-reference/endpoint/update",
         "api-reference/endpoint/delete"
       ]
+    },
+    {
+      "group": "Get Started",
+      "pages": [
+        "framework/start/installation"
+      ]
+    },
+    {
+      "group": "Building Your Network",
+      "pages": [
+        "framework/build/configuration"
+      ]
+    },
+    {
+      "group": "Get Started",
+      "pages": [
+        "starters/intro/introduction",
+        "starters/intro/deployment"
+   
+      ]
+    },
+    {
+      "group": "Spacenook",
+      "pages": [
+        "starters/spacenook/introduction",
+        "starters/spacenook/quickstart",
+        "starters/spacenook/configuration"
+      ]
+    },
+    {
+      "group": "Xitter",
+      "pages": ["starters/xitter/introduction"]
+    },
+    {
+      "group": "Tippit",
+      "pages": ["starters/tippit/introduction"]
+    },
+    {
+      "group": "Framework",
+      "pages": ["famework/start/introduction"]
     }
   ],
+
   "footerSocials": {
     "twitter": "https://twitter.com/mintlify",
     "github": "https://github.com/mintlify",
