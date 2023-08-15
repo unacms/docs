@@ -69,7 +69,7 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": ["introduction", "project", "deploy", "domain"]
     },
     {
       "group": "Essentials",
