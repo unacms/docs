@@ -5,7 +5,7 @@
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
-  "favicon": "/favicon.png",
+  "favicon": "/favicon.svg",
   "colors": {
     "primary": "#ef4444",
     "light": "#ef4444",
@@ -48,6 +48,11 @@
       "name": "Starter Kits",
       "icon": "rocket",
       "url": "starters"
+    },
+    {
+      "name": "Marketplace",
+      "icon": "shop",
+      "url": "https://una.io/products-home"
     },
     {
       "name": "Discussions",
