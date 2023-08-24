@@ -29,13 +29,13 @@
     "url": "https://dashboard.mintlify.com"
   },
   "topAnchor": {
-    "name": "Platform",
+    "name": "UNA.IO Platform",
     "icon": "circle-nodes"
   },
 
   "anchors": [
     {
-      "name": "Framework",
+      "name": "UNA Framework",
       "icon": "code",
       "url": "framework"
     },
@@ -97,7 +97,9 @@
     {
       "group": "Get Started",
       "pages": [
+        "framework/start/introduction",
         "framework/start/installation"
+       
       ]
     },
     {
