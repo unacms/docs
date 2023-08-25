@@ -1,18 +1,89 @@
 ---
 title: Installation
-description: "How to install UNA"
+description: "There are two options for installing UNA. One is [**UNA Cloud**](https://una.io/pro), which allows you to start UNA in a few minutes. The other is a manual installation on your own hosting by following these steps:
+"
 ---
 
-<img
-  className="block dark:hidden"
-  src="/images/hero-light.svg"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/hero-dark.svg"
-  alt="Hero Dark"
-/>
+
+
+## Step 1 - Download UNA Package
+
+[**Download the latest UNA package “.zip” archive**](https://una.io/page/download-product?id=86) and unzip the package. Your computer may unzip it automatically.
+
+## Step 2 - Upload Files to Web Server
+
+Upload the downloaded and unpacked UNA folder to your hosting server using an FTP client software (e.g., Transmit, Cyberduck, WinSCP, or FileZilla).
+
+<Tip>
+If you don’t know your hosting server **address**, **username** and **password**, contact your hosting provider support team.
+</Tip>
+
+
+1. Connect to your remote server via FTP.
+2. Open the `public_html` folder.
+3. Copy the contents of the UNA folder you previously downloaded to the `public_html` folder.
+
+_NOTE: If you want to install your site in a subfolder (e.g., mysite.com/community), create a subfolder in `public_html` and copy the files to it._
+
+_NOTE: When transferring the UNA files to your hosting server, do not copy the entire UNA folder. Instead, open the UNA folder on your computer and copy the contents (all the files and subfolders) inside it to your hosting server._
+
+_NOTE: Pay attention to the `.htaccess file`, as it may be hidden on *nix systems and in some FTP clients._
+
+_NOTE: [**Rewrite rules for Nginx web-server**](https://una.io/page/view-discussion?id=133)._
+
+## STEP 3 - Install
+
+Open the URL of your site (including the subfolder if you created one) in your web browser. The installation page will open automatically. From this page, you can either start the installation process or perform an automatic "server audit".
+
+_NOTE: Server audits check your hosting server for potential inconsistencies, software incompatibilities, or incorrect settings. If any issues are reported, contact your hosting provider and request a resolution. Provide them with the server audit report._
+
+### Permissions
+
+The installation script checks if your files have the correct access permissions. It shows the current status of the files and folders and the required status for UNA to work properly.
+
+To change file and folder permissions:
+
+1. Open your FTP client and navigate to the files you previously uploaded.
+2. Open the "info" of the folders and files with incorrect permissions.
+3. Find the "permissions" settings and change them to "writable" or "777".
+
+_NOTE: Generally, you need to change the permissions of `ffmpeg.exe` to `executable` (or 755). This file is located in the `plugins/ffmpeg/` folder._
+
+_NOTE: Do not change the permissions for any files or folders except those listed in the Permissions section of the installation script._
+
+_NOTE: When installing Starter Kits versions (such as **Spacenook**) change permissions of the `storage` folder recursively making all files and folders inside it writable ("777" permission for folders and "666" permission for files)._
+
+Return to your web browser's Installation page and click "Refresh" to re-check permissions. If everything is correct, click "Continue".
+
+### Site Configuration
+
+**SITE PATHS**: You generally don't need to change these unless you know the alternative location of "ImageMagick" software on your server, or your hosting provider advises you to do so.
+
+**DB CONFIG**: First, create an SQL database. You can create a new SQL database yourself, or your hosting provider can create it for you. Once created, you need to know the database name, username, and password.
+
+**SITE INFO**: Choose your preferred site name, a "no-reply" email address, and admin details. Make sure to remember your admin password and make it difficult to guess.
+
+**KEY AND SECRET**: These numbers are required for UNA to check for software version updates, to buy and download Apps, and to check licenses. Click the **[get UNA Key And Secret](https://una.io/page/kands-manage)** link to obtain the numbers via your registered UNA account. You can create an account at **https://una.io** website.
+
+**MODULES**: Finally, some modules (such as Templates and Languages) ask which language and template you would like to install by default. You can add more than one and change them later as well.
+
+Click the "Submit" button to finalize the installation.
+
+## STEP 4 - Finish
+
+1. After installation, you will be asked to set up a **cron jobs** command. This is required for your site to perform periodic actions. Copy the command and add it to the cron jobs. You can send the code from the final step of the installation to your hosting provider and request it to be added to your site’s cron jobs.
+
+2. Delete the “install” folder. Using your FTP client, find the `install` folder among the files you previously uploaded and delete it. **This is critical for your site security!**
+
+3. Go to UNA Studio (yoursite.com/studio), log in with your admin username and password (the ones you created during the Installation stage), and start adding apps, adjusting site settings, setting membership levels, and changing permissions.
+
+
+## Installation on Ubuntu Debian
+
+The main differences between the standard installation and installation on Ubuntu/Debian are the server environment, packages required, and some configuration steps. The standard installation assumes a generic hosting server, while the Ubuntu/Debian installation is specifically tailored for an Apache2 server running on an Ubuntu or Debian-based Linux distribution. The installation process for Ubuntu/Debian requires additional steps to set up and configure the LAMP stack (Linux, Apache, MySQL, PHP), create a virtual host, and install an SSL certificate using Let's Encrypt.
+
+[Click here][INSTALLATION-ON-UBUNTU-DEBIAN] to see detailed instructions on installation on Ubuntu/Debian.
+
 
 ## Setting up
 
